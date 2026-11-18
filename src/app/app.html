@@ -1,4 +1,5 @@
-<main class="resume">
+<!--
+ <main class="resume">
   <header class="intro">
     <h1>{{ fullName }}</h1>
     <p>
@@ -12,6 +13,15 @@
     <h2>Personal Profile</h2>
     <p>{{ profile }}</p>
   </section>
+ -->
+
+ <main class="resume">
+  <app-header
+    [fullName]="fullName"
+    [location]="location"
+    [email]="email"
+    [phone]="phone"
+    [profile]="profile" />
 
   <section class="education">
     <h2>Education</h2>
@@ -25,10 +35,10 @@
   }
 </section>
 
-  <app-profile-card></app-profile-card>
+    <app-profile-card />
 
-
-  <section>
+  <!--
+    <section>
     <h2>Key Skills</h2>
     <ul>
       @for (skill of skills; track skill) {
@@ -36,6 +46,11 @@
       }
     </ul>
   </section>
+  -->
+
+  <app-skills
+    [skills]="skills"
+    (skillSelected)="onSkillSelected($event)" />
 
     <section>
     <h2>Interests</h2>
@@ -47,8 +62,12 @@
   </section>
 
   <section class="interaction">
-    <h2>Angular Interaction</h2>
+    <h2 class="section-title">Angular Interaction</h2>
     <p>{{ message }}</p>
-    <button (click)="showMessage()">Click Me</button>
   </section>
+
+  <app-footer
+    [fullName]="fullName"
+    [proficiencies]="proficiencies" />
+
 </main>

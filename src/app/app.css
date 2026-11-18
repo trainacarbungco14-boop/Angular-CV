@@ -13,43 +13,6 @@
   box-shadow: 0 8px 28px rgba(80, 45, 60, 0.07);
 }
 
-/* Header */
-.intro {
-  text-align: center;
-  padding: 32px 20px;
-  margin-bottom: 38px;
-  background-color: #faf5f7;
-  border: 1px solid #f0e5e9;
-  border-radius: 12px;
-}
-
-.intro h1 {
-  margin: 0 0 10px;
-  color: #713b50;
-  font-size: 2.3rem;
-  font-weight: 700;
-  letter-spacing: -0.5px;
-}
-
-.intro p {
-  color: #74656c;
-  font-size: 0.9rem;
-  margin: 0;
-  overflow-wrap: anywhere;
-}
-
-.intro a {
-  color: #8b4c65;
-  font-weight: 600;
-  text-decoration: none;
-  transition: color 0.2s ease;
-}
-
-.intro a:hover {
-  color: #592d3e;
-  text-decoration: underline;
-}
-
 /* Sections */
 .resume > section {
   margin: 36px 0;
@@ -190,3 +153,4 @@
     padding: 18px;
   }
 }
+
