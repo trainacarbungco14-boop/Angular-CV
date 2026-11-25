@@ -1,36 +1,50 @@
-/* Header */
+/* ========================================
+   PERSONAL INTRODUCTION
+======================================== */
+
 .intro {
+  margin-bottom: 34px;
+  padding: 36px 24px;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  background: linear-gradient(135deg, #ffffff, #edf4f9);
   text-align: center;
-  padding: 32px 20px;
-  margin-bottom: 38px;
-  background-color: #faf5f7;
-  border: 1px solid #f0e5e9;
-  border-radius: 12px;
 }
 
 .intro h1 {
-  margin: 0 0 10px;
-  color: #713b50;
-  font-size: 2.3rem;
-  font-weight: 700;
-  letter-spacing: -0.5px;
+  margin: 0 0 12px;
+  color: var(--primary-dark);
+  font-size: clamp(1.8rem, 5vw, 2.4rem);
+  font-weight: 750;
+  letter-spacing: -0.8px;
 }
 
 .intro p {
-  color: #74656c;
-  font-size: 0.9rem;
   margin: 0;
+  color: var(--muted);
+  font-size: 0.92rem;
   overflow-wrap: anywhere;
 }
 
 .intro a {
-  color: #8b4c65;
+  color: var(--primary);
   font-weight: 600;
   text-decoration: none;
   transition: color 0.2s ease;
 }
 
 .intro a:hover {
-  color: #592d3e;
+  color: var(--primary-dark);
   text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+  .intro {
+    padding: 27px 16px;
+    margin-bottom: 28px;
+  }
+
+  .intro p {
+    line-height: 1.9;
+  }
 }

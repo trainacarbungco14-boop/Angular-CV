@@ -1,0 +1,58 @@
+
+<main class="resume">
+
+  <app-header
+    [fullName]="fullName"
+    [location]="location"
+    [email]="email"
+    [phone]="phone"
+    [profile]="profile" />
+
+  <!-- Education -->
+  <section class="education">
+    <h2>Education</h2>
+
+    @for (item of education; track item.school) {
+      <div class="education-item">
+        <h3>{{ item.school }}</h3>
+        <p>{{ item.degree }}</p>
+        <p>{{ item.specialization }}</p>
+        <span>{{ item.year }}</span>
+      </div>
+    }
+  </section>
+
+  <!-- Profile Card -->
+  <app-profile-card />
+
+  <!-- Skills -->
+  <app-skills
+    [skills]="skills"
+    (skillSelected)="onSkillSelected($event)" />
+
+  <!-- Projects -->
+  <app-directives />
+
+  <!-- Interests -->
+  <section class="interests">
+    <h2>Interests</h2>
+
+    <ul>
+      @for (interest of interests; track interest) {
+        <li>{{ interest }}</li>
+      }
+    </ul>
+  </section>
+
+  <!-- Angular Interaction -->
+  <section class="interaction">
+    <h2 class="section-title">Angular Interaction</h2>
+    <p>{{ message }}</p>
+  </section>
+
+  <!-- Footer -->
+  <app-footer
+    [fullName]="fullName"
+    [proficiencies]="proficiencies" />
+
+</main>

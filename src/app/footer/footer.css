@@ -1,33 +1,75 @@
+/* ========================================
+   TECHNICAL PROFICIENCIES TABLE
+======================================== */
+
 table {
   width: 100%;
-  border-collapse: collapse;
+  border: 1px solid var(--border);
+  border-collapse: separate;
+  border-spacing: 0;
+  border-radius: 9px;
+  overflow: hidden;
+  background: var(--surface);
 }
 
 th,
 td {
-  padding: 8px 12px;
-  border-bottom: 1px solid #e3e3e3;
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--border);
   text-align: left;
 }
 
 th {
-  color: #7a1f3d;
+  background: var(--primary-light);
+  color: var(--primary-dark);
+  font-size: 0.88rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
 }
 
+td {
+  color: var(--text);
+  font-size: 0.92rem;
+}
+
+tbody tr:last-child td {
+  border-bottom: none;
+}
+
+tbody tr:hover {
+  background: #f8fafc;
+}
+
+/* Proficiency badge */
 .level {
   display: inline-block;
-  padding: 2px 10px;
+  padding: 4px 11px;
   border-radius: 20px;
-  background: #f2e8ec;
-  color: #7a1f3d;
-  font-size: 0.85rem;
+  background: var(--primary-light);
+  color: var(--primary);
+  font-size: 0.8rem;
+  font-weight: 600;
 }
 
+/* Copyright */
 .copyright {
   margin-top: 32px;
-  padding-top: 16px;
-  border-top: 1px solid #cccccc;
-  color: #777777;
-  font-size: 0.9rem;
+  padding-top: 17px;
+  border-top: 1px solid var(--border);
+  color: var(--muted);
+  font-size: 0.85rem;
   text-align: center;
+}
+
+@media (max-width: 600px) {
+  th,
+  td {
+    padding: 10px 12px;
+    font-size: 0.85rem;
+  }
+
+  .level {
+    font-size: 0.75rem;
+  }
 }

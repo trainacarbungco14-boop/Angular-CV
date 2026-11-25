@@ -1,0 +1,79 @@
+/* ========================================
+   EDUCATION
+======================================== */
+
+.education-item {
+  padding: 17px 20px;
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--primary);
+  border-radius: 9px;
+  background: var(--surface);
+  box-shadow: var(--shadow);
+}
+
+.education-item h3 {
+  margin: 0 0 8px;
+  color: var(--heading);
+  font-size: 1.05rem;
+}
+
+.education-item p {
+  margin: 3px 0;
+  color: var(--text);
+}
+
+.education-item span {
+  display: inline-block;
+  margin-top: 8px;
+  color: var(--muted);
+  font-size: 0.88rem;
+  font-weight: 600;
+}
+
+/* ========================================
+   INTERESTS
+======================================== */
+
+.interests ul {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.interests li {
+  padding: 11px 15px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--surface);
+  color: var(--text);
+  transition: border-color 0.2s ease, transform 0.2s ease;
+}
+
+.interests li:hover {
+  border-color: #a9c4d9;
+  transform: translateY(-2px);
+}
+
+/* ========================================
+   ANGULAR INTERACTION
+======================================== */
+
+.interaction p {
+  margin: 0;
+  padding: 14px 17px;
+  border: 1px solid #d5e5f1;
+  border-left: 4px solid var(--primary);
+  border-radius: 7px;
+  background: var(--primary-light);
+  color: var(--primary-dark);
+  font-weight: 500;
+}
+
+@media (max-width: 600px) {
+  .interests ul {
+    grid-template-columns: 1fr;
+  }
+}
